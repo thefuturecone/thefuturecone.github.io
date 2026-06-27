@@ -1,0 +1,12 @@
+title: The Future Cone
+tagline: My exploration into demystifying the fundamentals of nature.
+
+description: My exploration into demystifying the fundamentals of nature.
+theme: minima
+
+header_pages:
+  - about.md
+  - index.md
+  - projects.md
+  - CV.md
+  - contact.md
