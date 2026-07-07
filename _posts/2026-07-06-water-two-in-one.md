@@ -8,9 +8,9 @@ tags:
   - Research
   - DeepLearning
 ---
-An interesting study recently published in the journal _Nature Physics_ by Liwen Li and others titled *"Evidence for the generic existence of two local structures in liquid water"* offers compelling evidence supporting a long-debated theory about one of the most abundant molecules - water ($H_2O$).
+An interesting [study](https://www.nature.com/articles/s41567-026-03301-8) recently published in the journal _Nature Physics_ by Liwen Li and others titled *"Evidence for the generic existence of two local structures in liquid water"* offers compelling evidence supporting a long-debated theory about one of the most abundant molecules - water ($H_2O$).
 
-We know that water behaves differently compared to other liquids. Water exhibits anomalous behavior as it has its maximum density at $4 \degree C$ and $1 \ atm$, meaning, it expands as the temperature decreases below $4 \degree C$. Studying this behavior, scientists came up with a theory that water is actually a mixture of two distinct local structures which are separated by a phase boundary. These are called:
+We know that water behaves differently compared to other liquids. Water exhibits anomalous behavior as it has its maximum density at 4℃ and $1 \ atm$, meaning, it expands as the temperature decreases below 4℃. Studying this behavior, scientists came up with a theory that water is actually a mixture of two distinct local structures which are separated by a phase boundary. These are called:
 - Low Density Liquid (LDL) Water
 - High Density Liquid (HDL) Water
 
