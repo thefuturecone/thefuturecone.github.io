@@ -10,3 +10,8 @@ header_pages:
   - projects.md
   - CV.md
   - contact.md
+  
+  markdown: kramdown
+  
+  kramdown:
+    math_engine: mathjax

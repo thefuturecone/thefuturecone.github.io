@@ -27,15 +27,15 @@ Imagine a simple pendulum swinging along its path. Now, freeze the motion at som
 
 The work done by a force ($F_i$) during this *virtual displacement* is called **virtual work** ($δW_i$).
 
-\[
+$$
 \delta W_i = \mathbf{F}_{i} \cdot \delta \mathbf{r}_{i}
-\]
+$$
 
 For a system in **static equilibrium**, as we can imagine, the total virtual work done by all forces must be zero.
 
-\[
+$$
 \delta W = \sum_i \mathbf{F}_{i} \cdot \delta \mathbf{r}_{i} = 0
-\]
+$$
 
 In any mechanical system, we can categorize forces into two types:
 *   **Applied Forces:** Gravity, external pushing/pulling, etc. ($\mathbf{F}_{app}$).
