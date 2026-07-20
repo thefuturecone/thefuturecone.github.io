@@ -54,16 +54,44 @@ layout: default
 
 {% if page.mathjax %}
 <script>
-  window.MathJax = {
-    tex: {
-      inlineMath: [['$', '$'], ['\\(', '\\)']],
-      displayMath: [['$$', '$$'], ['\\(', '\\)']],
-      processEscapes: true
-    },
-    options: {
-      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-    }
-  };
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],
+      processEscapes: true
+    },
+    options: {
+      // This tells MathJax to look inside the <script type="math/tex"> tags
+      // that Kramdown creates when math_engine is set to 'mathjax'
+      processHtmlClass: 'math'
+    }
+  };
+  
+  // Custom observer to bridge Kramdown's old v2 tags with MathJax v3
+  document.addEventListener("DOMContentLoaded", function () {
+    var scripts = document.querySelectorAll('script[type^="math/tex"]');
+    scripts.forEach(function (script) {
+      var isInline = !script.type.match(/mode=display/);
+      var div = document.createElement(isInline ? 'span' : 'div');
+      div.className = isInline ? 'math inline' : 'math display';
+      div.textContent = isInline ? '$' + script.textContent + '$' : '$$' + script.textContent + '$$';
+      script.parentNode.insertBefore(div, script);
+      script.remove();
+    });
+  });
 </script>
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<!--<script>-->
+<!--  window.MathJax = {-->
+<!--    tex: {-->
+<!--      inlineMath: [['$', '$'], ['\\(', '\\)']],-->
+<!--      displayMath: [['$$', '$$'], ['\\(', '\\)']],-->
+<!--      processEscapes: true-->
+<!--    },-->
+<!--    options: {-->
+<!--      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']-->
+<!--    }-->
+<!--  };-->
+<!--</script>-->
+<!--<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>-->
 {% endif %}

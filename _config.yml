@@ -11,6 +11,3 @@ header_pages:
   - CV.md
   - contact.md
   
-markdown: kramdown
-kramdown:
-  math_engine: null
