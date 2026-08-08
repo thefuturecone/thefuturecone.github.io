@@ -22,12 +22,15 @@ F_{ext} = \frac{dp}{dt} = \frac{d(mv)}{dt} = m\frac{dv}{dt} + v\frac{dm}{dt}$$
 
 Before we move forward, take a moment to reflect on the following scenarios:
 - **Scenario 1:** A cart filled with sand moves along a frictionless track at a constant velocity (taking $F_{ext} = 0$ for simplicity). Let's assume, sand is dropped **vertically into the cart from above** at a rate $\frac{dm}{dt}$. What will happen to it's velocity as sand is added to it?
+
 - **Scenario 2:** Now, let's imagine that instead of dropping sand into the cart, we create a hole at the bottom causing sand to **leak straight down the hole**. What will happen to cart's velocity as the amount of sand decreases?
+
 - **Scenario 3:** Now consider a rocket traveling through space. As burned gases are ejected out at high speeds, what happens to the rocket's speed?
 
 We will revisit these at the end of this post.
 
 Let's start with **The Variable-Mass Trap!**
+
 While expanding Newton's second law using the product rule looks mathematically valid, it is **physically invalid** for open systems. Such a formulation violates **[Galilean invariance](https://en.wikipedia.org/wiki/Galilean_invariance)** which states that the basic laws of physics are exactly the same for everyone in all inertial frames of reference. This is because in the above formula, it depends on the absolute velocity $v$ of the system (as $v$ changes based on the reference frame an observer chooses).
 
 How can we address this? Using another foundational concept of physics - **The Impulse-Momentum Theorem**.
@@ -41,6 +44,7 @@ By tracking a small amount of mass $dm$ entering the system (cart+sand) over tim
 $$
 F_{ext} = m \frac{dv}{dt} - v_{rel} \frac{dm}{dt}
 $$
+
 Where:
 * $F_{ext}$: Net external forces acting on the system
 * $m$: Instantaneous mass of the system at that exact moment
@@ -55,32 +59,39 @@ The term **$v_{rel} \frac{dm}{dt}$** is known as the **thrust**; because, as $m$
 $$
 F_{ext} + F_{thrust} = m \frac{dv}{dt}
 $$
+
 Where: $F_{thrust} = v_{rel} \frac{dm}{dt}$ and its is determined by the combination of two distinct factors - Mass Rate Change ($\frac{dm}{dt}$) and Relative Velocity Vector ($v_{rel}$).
 
 Now, let's go back to our example and look at two scenarios.
  
 **Scenario 1: Cart Collecting Sand** 
 * **The Setup:** Cart is moving at a constant velocity $v$. Sand is dropped into it **vertically from above** at a rate $\frac{dm}{dt}$. (Mass Increasing, $\frac{dm}{dt} > 0$)
+
 * **Relative Velocity:** Because the sand is dropped vertically, its initial horizontal velocity is zero ($u_{\text{horizontal}} = 0$). Therefore, its velocity relative to the moving cart is:
   $$
   v_{rel} = 0 - v = -v
   $$
+
 * **Applying Meshchersky’s Formula (assuming $F_{ext} = 0$):**
  $$
  0 + (-v)\left(\frac{dm}{dt}\right) = m \frac{dv}{dt} \implies m \frac{dv}{dt} = -v \frac{dm}{dt}
  $$
+ 
 * **Physical Result:** The cart **slows down**. It must constantly expend momentum to accelerate incoming stationary sand up to the cart's speed.
 
 **Scenario 2: A Cart Leaking Sand** 
 * **The Setup:** Cart is moving at velocity $v$ and sand leaks straight down through a hole in the bottom.
+
 * **Relative Velocity:** When the sand drops out, at the exact instant of separation, it shares the cart's horizontal velocity ($u = v$). Thus, its horizontal velocity relative to the cart is:
   $$
 	v_{rel} = v - v = 0
 	$$
+
 * **Applying Meshchersky’s Formula (assuming $F_{\text{ext}} = 0$):**
   $$
 	0 + (0)\left(\frac{dm}{dt}\right) = m \frac{dv}{dt} \implies m \frac{dv}{dt} = 0
 	$$
+
 * **Physical Result:** The cart's acceleration is zero ($dv/dt = 0$). Despite losing mass, **the cart does not speed up**, because the escaping sand carries away its share of forward momentum ($v$). 
 
 ---
