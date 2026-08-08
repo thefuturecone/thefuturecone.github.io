@@ -60,7 +60,8 @@ $$
 F_{ext} + F_{thrust} = m \frac{dv}{dt}
 $$
 
-Where: 
+Where:
+
 $F_{thrust} = v_{rel} \frac{dm}{dt}$ and its is determined by the combination of two distinct factors - Mass Rate Change ($\frac{dm}{dt}$) and Relative Velocity Vector ($v_{rel}$).
 
 Now, let's go back to our example and look at two scenarios.
@@ -68,7 +69,7 @@ Now, let's go back to our example and look at two scenarios.
 **Scenario 1: Cart Collecting Sand** 
 * **The Setup:** Cart is moving at a constant velocity $v$. Sand is dropped into it **vertically from above** at a rate $\frac{dm}{dt}$. (Mass Increasing, $\frac{dm}{dt} > 0$)
 
-* **Relative Velocity:** Because the sand is dropped vertically, its initial horizontal velocity is zero ($u_{horizontal} = 0$). Therefore, its velocity relative to the moving cart is:
+* **Relative Velocity:** Because the sand is dropped vertically, its initial horizontal velocity is zero ($u_{hor} = 0$). Therefore, its velocity relative to the moving cart is:
 
   $$
   v_{rel} = 0 - v = -v
